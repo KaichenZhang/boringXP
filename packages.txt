@@ -1,0 +1,5 @@
+flask==0.12.2
+flask_restful==0.3.6
+flask_jsonpify==1.5.0
+requests==2.18.4
+protobuf==3.4.0

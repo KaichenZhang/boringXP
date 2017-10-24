@@ -1,0 +1,58 @@
+{
+  "priceList": [
+    {
+      "product_number": 1,
+      "product_category": "A",
+	  "unit_price": 100,
+      "price_validation_period": 20
+    },
+	{
+      "product_number": 2,
+      "product_category": "B",
+	  "unit_price": 90,
+      "price_validation_period": 30
+    },
+	{
+      "product_number": 3,
+      "product_category": "C",
+	  "unit_price": 80,
+      "price_validation_period": 25
+    },
+	{
+      "product_number": 4,
+      "product_category": "D",
+	  "unit_price": 70,
+      "price_validation_period": 22
+    },
+	{
+      "product_number": 5,
+      "product_category": "E",
+	  "unit_price": 60,
+      "price_validation_period": 11
+    },
+	{
+      "product_number": 6,
+      "product_category": "F",
+	  "unit_price": 50,
+      "price_validation_period": 4
+    },
+	{
+      "product_number": 7,
+      "product_category": "G",
+	  "unit_price": 40,
+      "price_validation_period": 8
+    },
+	{
+      "product_number": 8,
+      "product_category": "H",
+	  "unit_price": 30,
+      "price_validation_period": 16
+    },
+	{
+      "product_number": 9,
+      "product_category": "I",
+	  "unit_price": 20,
+      "price_validation_period": 33
+    }
+  ]
+}

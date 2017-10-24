@@ -1,0 +1,8 @@
+message ClientRequest
+{
+  optional int32 rfq_id = 1;
+  optional int32 account_id = 2;
+  required int32 product_number= 3;   //this field must be provided
+  optional string product_category=4;
+  optional int32 quantity=5;
+}

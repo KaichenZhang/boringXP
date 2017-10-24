@@ -1,0 +1,60 @@
+{
+     "records": [
+          {
+               "rfq_id": 1234,
+               "account_id": 1,
+               "product_number": 5,
+               "product_category": "E",
+               "quantity": 100
+          },
+          {
+               "rfq_id": 1234,
+               "account_id": 1,
+               "product_number": 5,
+               "product_category": "E",
+               "quantity": 100
+          },
+          {
+               "rfq_id": 1234,
+               "account_id": 1,
+               "product_number": 5,
+               "product_category": "E",
+               "quantity": 100
+          },
+          {
+               "rfq_id": 1234,
+               "account_id": 1,
+               "product_number": 5,
+               "product_category": "E",
+               "quantity": 100
+          },
+          {
+               "rfq_id": 1234,
+               "account_id": 1,
+               "product_number": 5,
+               "product_category": "E",
+               "quantity": 100
+          },
+          {
+               "rfq_id": 1234,
+               "account_id": 1,
+               "product_number": 5,
+               "product_category": "E",
+               "quantity": 100
+          },
+          {
+               "rfq_id": 1234,
+               "account_id": 1,
+               "product_number": 5,
+               "product_category": "E",
+               "quantity": 100
+          },
+          {
+               "rfq_id": 1234,
+               "account_id": 1,
+               "product_number": 5,
+               "product_category": "E",
+               "quantity": 100
+          }
+     ]
+}
