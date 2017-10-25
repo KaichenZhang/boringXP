@@ -1,11 +1,10 @@
+import time
 from flask import Flask, request
-from flask_restful import Resource, Api
-from flask_jsonpify import jsonify
 import json
 import rfq_pb2
+import rfp_pb2
 
 app = Flask(__name__)
-api = Api(app)
 
 with open('priceData.json', 'r') as data_file:
     data = json.load(data_file)
@@ -13,42 +12,74 @@ with open('priceData.json', 'r') as data_file:
 request_log = []
 
 
-class GetLog(Resource):
-    def get(self):
-        with open('log.json', 'w') as log_file:
-            json.dump({'records': request_log}, log_file, indent=5)
-        with open('log.json') as data_file:
-            log_data = json.load(data_file)
-        return jsonify(log_data)
+# Handle the request with binary data
+@app.route('/protobufbt', methods=['POST'])
+def response_to_client_pb():
+    timestamp = int(round(time.time() / 10000))
+    rcv = rfq_pb2.ClientRequest()
+    # deserialization
+    rcv.ParseFromString(request.data)
+
+    record = {
+        'rfq_id': rcv.rfq_id,
+        'account_id': rcv.account_id,
+        'product_number': rcv.product_number,
+        'product_category': rcv.product_category,
+        'quantity': rcv.quantity
+    }
+
+    request_log.append(record)
+
+    rsp = rfp_pb2.ServerResponse()
+
+    for item in data["priceList"]:
+        if rcv.product_category == item["product_category"] and rcv.product_number == item["product_number"]:
+            print("Requested product found")
+            rsp.unit_price = item["unit_price"]
+            rsp.price_validation_period = "valid from " + str(timestamp) + " to " + str(
+                item["price_validation_period_span"] + timestamp)
+            print(rsp)
+            # serialization
+            return rsp.SerializeToString()
+
+    # if no such item in the database
+    rsp.unit_price = 0
+    rsp.price_validation_period = ""
+
+    return rsp.SerializeToString()
 
 
-class HandleRequests(Resource):
-    def post(self):
-        rcv = rfq_pb2.ClientRequest()
-        # deserialization
-        rcv.ParseFromString(request.data)
+# Handle the request with JSON text based data
+@app.route('/jsonstr', methods=['POST'])
+def response_to_client_json():
+    timestamp = int(round(time.time() / 10000))
+    # deserialization
+    rcv = json.loads(request.data)
 
-        record = {
-            'rfq_id': rcv.rfq_id,
-            'account_id': rcv.account_id,
-            'product_number': rcv.product_number,
-            'product_category': rcv.product_category,
-            'quantity': rcv.quantity
-        }
+    record = {
+        'rfq_id': rcv["rfq_id"],
+        'account_id': rcv["account_id"],
+        'product_number': rcv["product_number"],
+        'product_category': rcv["product_category"],
+        'quantity': rcv["quantity"]
+    }
 
-        request_log.append(record)
+    request_log.append(record)
+    rsp = {}
+    for item in data["priceList"]:
+        if rcv["product_category"] == item["product_category"] and rcv["product_number"] == item["product_number"]:
+            print("Requested product found")
+            i = item["unit_price"]
+            j = "valid from " + str(timestamp) + " to " + str(item["price_validation_period_span"] + timestamp)
+            rsp = {"unit_price": i, "price_validation_period": j}
+            print(rsp)
+            # serialization
+            return json.dumps(rsp)
 
-        for item in data["priceList"]:
-            if rcv.product_number == item["product_number"]:
-                print("Requested product found")
-                return jsonify(unit_price=item["unit_price"],
-                               price_validation_period=item["price_validation_period"])
+    # if no such item in the database
+    return json.dumps(rsp)
 
-        return jsonify(notification="no_such_item")
-
-
-api.add_resource(GetLog, '/get') # Route_1
-api.add_resource(HandleRequests, '/post') # Route_2
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5005, threaded=True)
+    # app.run(debug=True, port=5005)

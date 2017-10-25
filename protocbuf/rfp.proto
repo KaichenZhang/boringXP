@@ -1,0 +1,5 @@
+message ServerResponse
+{
+  optional int32 unit_price= 1;
+  optional string price_validation_period= 2;
+}

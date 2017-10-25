@@ -3,56 +3,488 @@
     {
       "product_number": 1,
       "product_category": "A",
-	  "unit_price": 100,
-      "price_validation_period": 20
+      "unit_price": 752,
+      "price_validation_period_span": 20
     },
-	{
+    {
+      "product_number": 2,
+      "product_category": "A",
+      "unit_price": 286,
+      "price_validation_period_span": 20
+    },
+    {
+      "product_number": 3,
+      "product_category": "A",
+      "unit_price": 2875,
+      "price_validation_period_span": 20
+    },
+    {
+      "product_number": 4,
+      "product_category": "A",
+      "unit_price": 2424,
+      "price_validation_period_span": 20
+    },
+    {
+      "product_number": 5,
+      "product_category": "A",
+      "unit_price": 452,
+      "price_validation_period_span": 20
+    },
+    {
+      "product_number": 6,
+      "product_category": "A",
+      "unit_price": 7254,
+      "price_validation_period_span": 20
+    },
+    {
+      "product_number": 7,
+      "product_category": "A",
+      "unit_price": 542,
+      "price_validation_period_span": 20
+    },
+    {
+      "product_number": 8,
+      "product_category": "A",
+      "unit_price": 4521,
+      "price_validation_period_span": 20
+    },
+    {
+      "product_number": 9,
+      "product_category": "A",
+      "unit_price": 12,
+      "price_validation_period_span": 20
+    },
+    {
+      "product_number": 1,
+      "product_category": "B",
+      "unit_price": 785,
+      "price_validation_period_span": 30
+    },
+    {
       "product_number": 2,
       "product_category": "B",
-	  "unit_price": 90,
-      "price_validation_period": 30
+      "unit_price": 74,
+      "price_validation_period_span": 30
     },
-	{
+    {
+      "product_number": 3,
+      "product_category": "B",
+      "unit_price": 24,
+      "price_validation_period_span": 30
+    },
+    {
+      "product_number": 4,
+      "product_category": "B",
+      "unit_price": 24,
+      "price_validation_period_span": 30
+    },
+    {
+      "product_number": 5,
+      "product_category": "B",
+      "unit_price": 90,
+      "price_validation_period_span": 30
+    },
+    {
+      "product_number": 6,
+      "product_category": "B",
+      "unit_price": 435,
+      "price_validation_period_span": 30
+    },
+    {
+      "product_number": 7,
+      "product_category": "B",
+      "unit_price": 3245,
+      "price_validation_period_span": 30
+    },
+    {
+      "product_number": 8,
+      "product_category": "B",
+      "unit_price": 904,
+      "price_validation_period_span": 30
+    },
+    {
+      "product_number": 9,
+      "product_category": "B",
+      "unit_price": 5324,
+      "price_validation_period_span": 30
+    },
+    {
+      "product_number": 1,
+      "product_category": "C",
+      "unit_price": 4545,
+      "price_validation_period_span": 25
+    },
+    {
+      "product_number": 2,
+      "product_category": "C",
+      "unit_price": 789,
+      "price_validation_period_span": 25
+    },
+    {
       "product_number": 3,
       "product_category": "C",
-	  "unit_price": 80,
-      "price_validation_period": 25
+      "unit_price": 5678,
+      "price_validation_period_span": 25
     },
-	{
+    {
+      "product_number": 4,
+      "product_category": "C",
+      "unit_price": 456,
+      "price_validation_period_span": 25
+    },
+    {
+      "product_number": 5,
+      "product_category": "C",
+      "unit_price": 4567,
+      "price_validation_period_span": 25
+    },
+    {
+      "product_number": 6,
+      "product_category": "C",
+      "unit_price": 678,
+      "price_validation_period_span": 25
+    },
+    {
+      "product_number": 7,
+      "product_category": "C",
+      "unit_price": 80,
+      "price_validation_period_span": 25
+    },
+    {
+      "product_number": 8,
+      "product_category": "C",
+      "unit_price": 5674,
+      "price_validation_period_span": 25
+    },
+    {
+      "product_number": 9,
+      "product_category": "C",
+      "unit_price": 80,
+      "price_validation_period_span": 25
+    },
+    {
+      "product_number": 1,
+      "product_category": "D",
+      "unit_price": 78,
+      "price_validation_period_span": 22
+    },
+    {
+      "product_number": 2,
+      "product_category": "D",
+      "unit_price": 543,
+      "price_validation_period_span": 22
+    },
+    {
+      "product_number": 3,
+      "product_category": "D",
+      "unit_price": 70,
+      "price_validation_period_span": 22
+    },
+    {
       "product_number": 4,
       "product_category": "D",
-	  "unit_price": 70,
-      "price_validation_period": 22
+      "unit_price": 554,
+      "price_validation_period_span": 22
     },
-	{
+    {
+      "product_number": 5,
+      "product_category": "D",
+      "unit_price": 3,
+      "price_validation_period_span": 22
+    },
+    {
+      "product_number": 6,
+      "product_category": "D",
+      "unit_price": 5,
+      "price_validation_period_span": 22
+    },
+    {
+      "product_number": 7,
+      "product_category": "D",
+      "unit_price": 52,
+      "price_validation_period_span": 22
+    },
+    {
+      "product_number": 8,
+      "product_category": "D",
+      "unit_price": 432,
+      "price_validation_period_span": 22
+    },
+    {
+      "product_number": 9,
+      "product_category": "D",
+      "unit_price": 34,
+      "price_validation_period_span": 22
+    },
+    {
+      "product_number": 1,
+      "product_category": "E",
+      "unit_price": 55,
+      "price_validation_period_span": 11
+    },
+    {
+      "product_number": 2,
+      "product_category": "E",
+      "unit_price": 33,
+      "price_validation_period_span": 11
+    },
+    {
+      "product_number": 3,
+      "product_category": "E",
+      "unit_price": 44,
+      "price_validation_period_span": 11
+    },
+    {
+      "product_number": 4,
+      "product_category": "E",
+      "unit_price": 345,
+      "price_validation_period_span": 11
+    },
+    {
       "product_number": 5,
       "product_category": "E",
-	  "unit_price": 60,
-      "price_validation_period": 11
+      "unit_price": 526,
+      "price_validation_period_span": 11
     },
-	{
+    {
+      "product_number": 6,
+      "product_category": "E",
+      "unit_price": 5788,
+      "price_validation_period_span": 11
+    },
+    {
+      "product_number": 7,
+      "product_category": "E",
+      "unit_price": 87562,
+      "price_validation_period_span": 11
+    },
+    {
+      "product_number": 8,
+      "product_category": "E",
+      "unit_price": 6879,
+      "price_validation_period_span": 11
+    },
+    {
+      "product_number": 9,
+      "product_category": "E",
+      "unit_price": 892,
+      "price_validation_period_span": 11
+    },
+    {
+      "product_number": 1,
+      "product_category": "F",
+      "unit_price": 8726,
+      "price_validation_period_span": 4
+    },
+    {
+      "product_number": 2,
+      "product_category": "F",
+      "unit_price": 526,
+      "price_validation_period_span": 4
+    },
+    {
+      "product_number": 3,
+      "product_category": "F",
+      "unit_price": 72,
+      "price_validation_period_span": 4
+    },
+    {
+      "product_number": 4,
+      "product_category": "F",
+      "unit_price": 69,
+      "price_validation_period_span": 4
+    },
+    {
+      "product_number": 5,
+      "product_category": "F",
+      "unit_price": 5,
+      "price_validation_period_span": 4
+    },
+    {
       "product_number": 6,
       "product_category": "F",
-	  "unit_price": 50,
-      "price_validation_period": 4
+      "unit_price": 8672,
+      "price_validation_period_span": 4
     },
-	{
+    {
+      "product_number": 7,
+      "product_category": "F",
+      "unit_price": 386,
+      "price_validation_period_span": 4
+    },
+    {
+      "product_number": 8,
+      "product_category": "F",
+      "unit_price": 435,
+      "price_validation_period_span": 4
+    },
+    {
+      "product_number": 9,
+      "product_category": "F",
+      "unit_price": 354,
+      "price_validation_period_span": 4
+    },
+    {
+      "product_number": 1,
+      "product_category": "G",
+      "unit_price": 345,
+      "price_validation_period_span": 8
+    },
+    {
+      "product_number": 2,
+      "product_category": "G",
+      "unit_price": 87,
+      "price_validation_period_span": 8
+    },
+    {
+      "product_number": 3,
+      "product_category": "G",
+      "unit_price": 837,
+      "price_validation_period_span": 8
+    },
+    {
+      "product_number": 4,
+      "product_category": "G",
+      "unit_price": 3789,
+      "price_validation_period_span": 8
+    },
+    {
+      "product_number": 5,
+      "product_category": "G",
+      "unit_price": 54,
+      "price_validation_period_span": 8
+    },
+    {
+      "product_number": 6,
+      "product_category": "G",
+      "unit_price": 3456,
+      "price_validation_period_span": 8
+    },
+    {
       "product_number": 7,
       "product_category": "G",
-	  "unit_price": 40,
-      "price_validation_period": 8
+      "unit_price": 56,
+      "price_validation_period_span": 8
     },
-	{
+    {
+      "product_number": 8,
+      "product_category": "G",
+      "unit_price": 34,
+      "price_validation_period_span": 8
+    },
+    {
+      "product_number": 9,
+      "product_category": "G",
+      "unit_price": 34,
+      "price_validation_period_span": 8
+    },
+    {
+      "product_number": 1,
+      "product_category": "H",
+      "unit_price": 5,
+      "price_validation_period_span": 16
+    },
+    {
+      "product_number": 2,
+      "product_category": "H",
+      "unit_price": 78,
+      "price_validation_period_span": 16
+    },
+    {
+      "product_number": 3,
+      "product_category": "H",
+      "unit_price": 645,
+      "price_validation_period_span": 16
+    },
+    {
+      "product_number": 4,
+      "product_category": "H",
+      "unit_price": 78,
+      "price_validation_period_span": 16
+    },
+    {
+      "product_number": 5,
+      "product_category": "H",
+      "unit_price": 654,
+      "price_validation_period_span": 16
+    },
+    {
+      "product_number": 6,
+      "product_category": "H",
+      "unit_price": 587,
+      "price_validation_period_span": 16
+    },
+    {
+      "product_number": 7,
+      "product_category": "H",
+      "unit_price": 57,
+      "price_validation_period_span": 16
+    },
+    {
       "product_number": 8,
       "product_category": "H",
-	  "unit_price": 30,
-      "price_validation_period": 16
+      "unit_price": 57,
+      "price_validation_period_span": 16
     },
-	{
+    {
+      "product_number": 9,
+      "product_category": "H",
+      "unit_price": 4,
+      "price_validation_period_span": 16
+    },
+    {
+      "product_number": 1,
+      "product_category": "I",
+      "unit_price": 54,
+      "price_validation_period_span": 33
+    },
+    {
+      "product_number": 2,
+      "product_category": "I",
+      "unit_price": 36,
+      "price_validation_period_span": 33
+    },
+    {
+      "product_number": 3,
+      "product_category": "I",
+      "unit_price": 20,
+      "price_validation_period_span": 33
+    },
+    {
+      "product_number": 4,
+      "product_category": "I",
+      "unit_price": 2240,
+      "price_validation_period_span": 33
+    },
+    {
+      "product_number": 5,
+      "product_category": "I",
+      "unit_price": 2024,
+      "price_validation_period_span": 33
+    },
+    {
+      "product_number": 6,
+      "product_category": "I",
+      "unit_price": 270,
+      "price_validation_period_span": 33
+    },
+    {
+      "product_number": 7,
+      "product_category": "I",
+      "unit_price": 2720,
+      "price_validation_period_span": 33
+    },
+    {
+      "product_number": 8,
+      "product_category": "I",
+      "unit_price": 210,
+      "price_validation_period_span": 33
+    },
+    {
       "product_number": 9,
       "product_category": "I",
-	  "unit_price": 20,
-      "price_validation_period": 33
+      "unit_price": 320,
+      "price_validation_period_span": 33
     }
   ]
 }
