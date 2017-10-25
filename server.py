@@ -3,13 +3,13 @@ from flask import Flask, request
 import json
 import rfq_pb2
 import rfp_pb2
+from rfpmod import Rfp
+from rfqmod import Rfq
 
 app = Flask(__name__)
 
 with open('priceData.json', 'r') as data_file:
     data = json.load(data_file)
-
-request_log = []
 
 
 # Handle the request with binary data
@@ -19,16 +19,6 @@ def response_to_client_pb():
     rcv = rfq_pb2.ClientRequest()
     # deserialization
     rcv.ParseFromString(request.data)
-
-    record = {
-        'rfq_id': rcv.rfq_id,
-        'account_id': rcv.account_id,
-        'product_number': rcv.product_number,
-        'product_category': rcv.product_category,
-        'quantity': rcv.quantity
-    }
-
-    request_log.append(record)
 
     rsp = rfp_pb2.ServerResponse()
 
@@ -46,6 +36,7 @@ def response_to_client_pb():
     rsp.unit_price = 0
     rsp.price_validation_period = ""
 
+    # serialization
     return rsp.SerializeToString()
 
 
@@ -55,31 +46,27 @@ def response_to_client_json():
     timestamp = int(round(time.time() / 10000))
     # deserialization
     rcv = json.loads(request.data)
+    # create client request instance
+    client_request = Rfq(rcv["rfq_id"], rcv["account_id"], rcv["product_number"], rcv["product_category"],
+                         rcv["quantity"])
 
-    record = {
-        'rfq_id': rcv["rfq_id"],
-        'account_id': rcv["account_id"],
-        'product_number': rcv["product_number"],
-        'product_category': rcv["product_category"],
-        'quantity': rcv["quantity"]
-    }
-
-    request_log.append(record)
-    rsp = {}
     for item in data["priceList"]:
-        if rcv["product_category"] == item["product_category"] and rcv["product_number"] == item["product_number"]:
+        if client_request.product_category == item["product_category"] and \
+                        client_request.product_number == item["product_number"]:
             print("Requested product found")
-            i = item["unit_price"]
-            j = "valid from " + str(timestamp) + " to " + str(item["price_validation_period_span"] + timestamp)
-            rsp = {"unit_price": i, "price_validation_period": j}
-            print(rsp)
+            # create response instance
+            send_response = Rfp(item["unit_price"], "valid from " + str(timestamp) + " to " + str(
+                item["price_validation_period_span"] + timestamp))
             # serialization
-            return json.dumps(rsp)
+            # convert object instance send_response to dictionary
+            return json.dumps(send_response.__dict__)
 
     # if no such item in the database
-    return json.dumps(rsp)
+    send_response = Rfp(0, "")
+
+    # serialization
+    return json.dumps(send_response.__dict__)
 
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5005, threaded=True)
-    # app.run(debug=True, port=5005)
